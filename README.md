@@ -30,6 +30,22 @@ const dog = new Dog('Daisy');
 dog.howlName(); // output: 'Hello my name is: Daisy'
 ```
 
+## Constructor function with inheritance
+
+```javascript
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.howlName = function() {
+  console.log('Hello my name is: ', this.name);
+}
+
+const dog = new Dog('Daisy');
+dog.howlName(); // output: 'Hello my name is: Daisy'
+```
+
+
 ## Object constructor
 
 ```javascript
@@ -52,5 +68,65 @@ const dog = {
 
 const myDog = Object.create(dog);
 myDog.name = 'Bob';
+myDog.howlName();
+```
+
+## Object.create with inheritance
+
+```javascript
+const dog = {
+  bark: function() {
+    console.log('Bark!);
+  },
+  howlName: function() {
+    console.log('Hello my name is: ', this.name);
+  }
+};
+
+const myDog = Object.create(dog);
+myDog.bark(); // prints: Bark!
+myDog.name = "Bill";
+
+const billTheDog = Object.create(myDog);
+myDog.howlName(); // prints: Hello my name is: Bill
+```
+
+## class keyword
+
+```javascript
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  howlName() {
+    console.log('Hello my name is: ', this.name);
+  }
+}
+
+const myDog = new Dog('Snowy');
+myDog.howlName();
+```
+
+## class keyword with inheritance
+
+```javascript
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
+  
+  howlName() {
+    console.log('Hello my name is: ', this.name);
+  }
+}
+
+const myDog = new Dog('Snowy');
 myDog.howlName();
 ```
