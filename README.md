@@ -40,3 +40,17 @@ dog.howlName = function() {
   console.log('Hello my name is: ', this.name);
 }
 ```
+
+## Object.create
+
+```
+const dog = {
+  howlName: function() {
+    console.log('Hello my name is: ', this.name);
+  }
+};
+
+const myDog = Object.create(dog);
+myDog.name = 'Bob';
+myDog.howlName();
+```
