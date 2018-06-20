@@ -43,7 +43,7 @@ dog.howlName = function() {
 
 ## Object.create
 
-```
+```javascript
 const dog = {
   howlName: function() {
     console.log('Hello my name is: ', this.name);
