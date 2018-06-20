@@ -76,7 +76,7 @@ myDog.howlName();
 ```javascript
 const dog = {
   bark: function() {
-    console.log('Bark!);
+    console.log('Bark!');
   },
   howlName: function() {
     console.log('Hello my name is: ', this.name);
