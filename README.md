@@ -5,7 +5,7 @@ Different Object-Oriented JS Patterns
 
 ```javascript
 function createDog(name) {
-  const obj = {};
+  const obj = {}; // or new Object(); but typically this isnt necessary
   obj.name = name;
   obj.howlName = function() {
     console.log('Hello my name is: ', this.name);
