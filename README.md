@@ -18,6 +18,11 @@ const dog = createDog('Hank');
 dog.howlName(); // output: 'Hello my name is: Hank'
 ```
 
+**Cons:**
+* Verbose, you need to create getters and setters
+* Full access to properties (eg: `dog.name`) which can bipass logic and data security
+
+
 ## Constructor function
 
 ```javascript
@@ -31,6 +36,13 @@ function Dog(name) {
 const dog = new Dog('Fluffy');
 dog.howlName(); // output: 'Hello my name is: Fluffy'
 ```
+
+**Pros:**
+* No need to create getters and setters
+
+**Cons:**
+* Full access to properties (eg: `dog.name`) which can bipass logic and data security
+
 
 ## Constructor function with inheritance
 
@@ -46,7 +58,6 @@ Dog.prototype.howlName = function() {
 const dog = new Dog('Fluffy');
 dog.howlName(); // output: 'Hello my name is: Fluffy'
 ```
-
 
 ## Object constructor
 
