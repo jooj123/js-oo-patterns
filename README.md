@@ -66,14 +66,16 @@ function Animal(name) {
   this.name = name;
 }
 
-Animal.prototype.sayName = function() {
-  console.log('Hello my name is: ', this.name);
-}
-
 function Dog(name, tailLength) {
   Animal.call(this, name);
-
   this.tailLength = tailLength;
+}
+
+// Link prototypes and add prototype methods
+Dog.prototype = Object.create(Animal.prototype);
+
+Animal.prototype.sayName = function() {
+  console.log('Hello my name is: ', this.name);
 }
 
 Dog.prototype.sayLength = function() {
