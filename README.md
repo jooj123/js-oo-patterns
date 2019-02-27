@@ -44,7 +44,7 @@ dog.howlName(); // output: 'Hello my name is: Fluffy'
 * Full access to properties (eg: `dog.name`) which can bipass logic and data security
 
 
-## Constructor function with inheritance
+## Constructor function & adding to prototype
 
 ```javascript
 function Dog(name) {
@@ -57,6 +57,32 @@ Dog.prototype.howlName = function() {
 
 const dog = new Dog('Fluffy');
 dog.howlName(); // output: 'Hello my name is: Fluffy'
+```
+
+## Constructor function with inheritance
+
+```javascript
+function Animal(name) {
+  this.name = name;
+}
+
+Animal.prototype.sayName = function() {
+  console.log('Hello my name is: ', this.name);
+}
+
+function Dog(name, tailLength) {
+  Animal.call(this, name);
+
+  this.tailLength = tailLength;
+}
+
+Dog.prototype.sayLength = function() {
+  console.log('My tail length is: ', this.tailLength);
+}
+
+const dog = new Dog('Fluffy', 23);
+dog.sayName(); // output: 'Hello my name is: Fluffy'
+dog.sayLength(); // output: 'My tail length is: 23'
 ```
 
 ## Object constructor
