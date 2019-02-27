@@ -28,8 +28,8 @@ function Dog(name) {
   }
 }
 
-const dog = new Dog('Daisy');
-dog.howlName(); // output: 'Hello my name is: Daisy'
+const dog = new Dog('Fluffy');
+dog.howlName(); // output: 'Hello my name is: Fluffy'
 ```
 
 ## Constructor function with inheritance
@@ -43,8 +43,8 @@ Dog.prototype.howlName = function() {
   console.log('Hello my name is: ', this.name);
 }
 
-const dog = new Dog('Daisy');
-dog.howlName(); // output: 'Hello my name is: Daisy'
+const dog = new Dog('Fluffy');
+dog.howlName(); // output: 'Hello my name is: Fluffy'
 ```
 
 
