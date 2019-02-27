@@ -132,6 +132,9 @@ const billTheDog = Object.create(myDog);
 myDog.howlName(); // prints: Hello my name is: Bill
 ```
 
+**Note differences between `Object.assign()` from MDN:** `Object.create` method creates a new object, using an existing object as the prototype of the newly created object (so can be specifically used for inheritance)
+The `Object.assign()` method on the other hand is used to copy the values of all enumerable own properties from one or more source objects to a target object. It will return the target object.
+
 ## class keyword
 
 ```javascript
