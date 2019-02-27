@@ -10,6 +10,8 @@ function createDog(name) {
   obj.howlName = function() {
     console.log('Hello my name is: ', this.name);
   }
+  
+  return obj;
 }
 
 const dog = createDog('Hank');
